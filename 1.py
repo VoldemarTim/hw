@@ -1,15 +1,27 @@
-duration = int(input('Введите количество секунд:'))
-if duration < 60:
-    print(f'{duration} секунд(а)')
+#1. Написать функцию num_translate(), переводящую числительные от 0 до 10 c английского на русский язык.
+#Например:
+#>>> >>> num_translate("one")
+#"один"
+#>>> num_translate("eight")
+#"восемь"
 
-elif 60 <= duration < 3600:
-    print(f'{duration % 60} секунд(а), {duration // 60} минута(а)')
+#list_english = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
+#list_russian = ['ноль', 'один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь', 'девять', 'десять']
 
-elif 3600 <= duration < 86400:
-    print(f'{(duration % 3600) % 60} секунд(а), {(duration % 3600) // 60} минут(а), {duration // 3600} час(а/ов')
+num_translate = {
+        'zero': 'ноль',
+        'one': 'один',
+        'two': 'два',
+        'three': 'три',
+        'four': 'четыре',
+        'five': 'пять',
+        'six': 'шесть',
+        'seven': 'семь',
+        'eight': 'восемь',
+        'nine': 'девять',
+        'ten': 'десять'
+}
+print(num_translate.get('te', 'None'))
 
-elif 86400 <= duration < 2419200:
-    print(f'{(((duration % 86400) % 3600) % 60 % 60)} секунд(а), {((duration % 86400) % 3600) // 60} минута(а),'
-          f'{(duration % 86400) // 3600} час(а/ов), {duration // 86400} день/дней/дня')
 
 
