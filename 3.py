@@ -1,6 +1,6 @@
 
 book = {
-    'И': 'Иван',
+    'И': ['Иван', 'Илья'],
     'М': 'Мария',
     'П': 'Петр'
 }
@@ -8,10 +8,6 @@ book = {
 while True:
     print('Enter a name: (Введите имя)')
     name = input()
-    if name == '':
-        break
 
     if name in book:
         print(book[name])
-    else:
-        print('Нет такого имени в книге')
