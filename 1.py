@@ -10,3 +10,20 @@
 # 15
 # >>> next(odd_to_15)
 # ...StopIteration...
+
+from itertools import count
+
+
+def fgen():
+    for i in count(1, 2):
+        yield(i)
+
+generator = fgen()
+x = 0
+for k in generator:
+    if x < 8:
+        print(k)
+        x += 1
+    else:
+        break
+
