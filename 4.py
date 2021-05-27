@@ -18,3 +18,5 @@
 #     raise ValueError(msg)
 # ValueError: wrong val -5
 # Примечание: сможете ли вы замаскировать работу декоратора?
+#
+#
